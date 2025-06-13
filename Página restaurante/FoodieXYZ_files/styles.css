@@ -248,6 +248,7 @@ header button i {
 /* ********************************** */
 /*             BANNER HERO            */
 /* ********************************** */
+
 .section-banner-hero {
     display: flex;
     gap: 30px;
@@ -387,6 +388,7 @@ header button i {
 /* ********************************** */
 /*         SECCIÓN CATEGORIAS         */
 /* ********************************** */
+
 .section-categories {
     display: flex;
     flex-direction: column;
@@ -504,6 +506,7 @@ header button i {
 /* ********************************** */
 /*            MAIN RECETAS            */
 /* ********************************** */
+
 main {
     display: flex;
     flex-direction: column;
@@ -581,24 +584,24 @@ main p {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 2; /* Añadido para asegurar visibilidad */
+    z-index: 2;
 }
 
 .list-card-recipes .card-recipe .container-img .btn-favorite i {
     font-size: 16px;
-    color: #fc6260; /* Cambiado a rojo para mejor contraste */
-    transition: all 0.3s;
+    color: #ccc;
+    transition: color .2s;
 }
 
 .list-card-recipes .card-recipe .container-img .btn-favorite i.active {
-    color: #fff; /* Cambiado a blanco para mejor contraste */
-    text-shadow: 0 0 3px #000; /* Sombra para mejor legibilidad */
+    color: #fc6260;
+    text-shadow: 0 0 3px #000;
 }
 
 .list-card-recipes .card-recipe .footer {
     display: flex;
     align-items: center;
-    gap: 35px;
+    gap: 25px;
 }
 
 .list-card-recipes .card-message {
@@ -640,6 +643,7 @@ main p {
 /* ********************************** */
 /*            SECCIÓN CHEF            */
 /* ********************************** */
+
 .section-chef {
     display: flex;
     align-items: center;
@@ -698,6 +702,7 @@ main p {
 /* ********************************** */
 /*           POSTS INSTAGRAM          */
 /* ********************************** */
+
 .section-posts-instagram {
     background: linear-gradient(to bottom, #fff 25%, #ecfafe);
     padding: 20px 0 40px 0;
@@ -771,10 +776,11 @@ main p {
 /* ********************************** */
 /*    SECCIÓN MÁS CARDS DE RECETAS    */
 /* ********************************** */
+
 .section-more-recipes {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 30px;
     align-items: center;
 }
 
@@ -838,25 +844,26 @@ main p {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 2; /* Añadido para asegurar visibilidad */
+    z-index: 2;
 }
 
 .section-more-recipes .list-card-recipes .card-recipe .container-img .btn-favorite i {
     font-size: 16px;
-    color: #fc6260; /* Cambiado a rojo para mejor contraste */
-    transition: all 0.3s;
+    color: #ccc;
+    transition: color .2s;
 }
 
 .section-more-recipes .list-card-recipes .card-recipe .container-img .btn-favorite i.active {
-    color: #fff; /* Cambiado a blanco para mejor contraste */
-    text-shadow: 0 0 3px #000; /* Sombra para mejor legibilidad */
+    color: #fc6260;
+    text-shadow: 0 0 3px #000;
 }
 
 .section-more-recipes .list-card-recipes .card-recipe .footer {
     display: flex;
     align-items: center;
-    gap: 35px;
+    gap: 10px;
 }
+
 
 @media (max-width: 1024px) {
     .section-more-recipes .list-card-recipes {
@@ -877,6 +884,7 @@ main p {
 /* ********************************** */
 /*             NEWSLETTER             */
 /* ********************************** */
+
 .section-newsletter {
     margin: 120px auto;
     height: 550px;
@@ -884,7 +892,7 @@ main p {
     background-color: var(--color-secondary);
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 10px;
     justify-content: center;
     align-items: center;
 }
@@ -896,12 +904,65 @@ main p {
 
 .section-newsletter .container-input {
     display: flex;
-    gap: 30px;
-    padding: 10px;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
     border-radius: 15px;
+    background-color: white;
+    width: 100%;
+    max-width: 700px;
+    margin-top: 40px;
+    justify-content: center;
+}
+
+.section-newsletter .container-input input {
+    flex: 1 1 300px;
+    min-width: 250px;
+    border: 2px solid #ccc;
+    padding: 15px;
+    border-radius: var(--rounded-md);
+    font-family: inherit;
+    font-weight: 500;
+}
+
+.section-newsletter .container-input button {
+    flex: 1 1 150px;
+    min-width: 150px;
+    padding: 15px;
+    background-color: var(#1b1a1a);
+    color: #fff;
+    border: none;
+    border-radius: var(--rounded-md);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.section-newsletter .container-input button:hover {
+    background-color: #3a3a3a;
+}
+
+.alert-success {
+  background-color: var(--color-primary);
+  color: #000;
+  padding: 15px;
+  border-radius: var(--rounded-md);
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/*
+.section-newsletter .container-input {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
     background-color: white;
     width: 700px;
     margin-top: 40px;
+    margin-left: 0;
+    padding: 15px;
+    border-radius: var(--rounded-md);
 }
 
 .section-newsletter .container-input input {
@@ -912,10 +973,11 @@ main p {
     margin-left: 35px;
     font-family: inherit;
 }
+*/
 
 @media (max-width: 768px) {
     .section-newsletter {
-        height: 400px;
+        height: 600px;
         padding: 0 20px;
         gap: 20px;
     }
@@ -934,7 +996,6 @@ main p {
         width: 100%;
         gap: 20px;
         margin-top: 0;
-        flex-direction: column;
     }
     
     .section-newsletter .container-input input {
@@ -947,9 +1008,95 @@ main p {
     }
 }
 
+
+/* ********************************** */
+/*               BLOG                 */
+/* ********************************** */
+
+    .chat-container { max-width: 600px; margin: 40px auto; }
+    .messages { border: 1px solid #ccc; height: 400px; overflow-y: auto; padding: 10px; background: #f9f9f9; }
+    .message { margin-bottom: 15px; }
+    .meta { font-size: 12px; color: #666; }
+    .text { font-size: 14px; }
+    .chat-form { display: flex; flex-direction: column; gap: 10px; margin-top: 10px; }
+    .chat-form input, .chat-form button { padding: 10px; font-size: 14px; border-radius: var(--rounded-md); border: 1px solid #ccc; }
+    .chat-form button { background: #000; color: #fff; border: none; cursor: pointer; }
+
+/*
+favorite
+.section-blog {
+  margin: 80px auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: var(--rounded-xl);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.section-blog h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+  color: var(--color-tertiary);
+  text-align: center;
+}
+
+.blog-messages {
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 20px;
+  background-color: var(--color-secondary);
+  border-radius: var(--rounded-md);
+  margin-bottom: 30px;
+}
+
+.message-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: var(--rounded-md);
+  margin-bottom: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.message-meta {
+  font-size: 12px;
+  color: #686b6b;
+  margin-bottom: 8px;
+}
+
+.message-text {
+  font-size: 14px;
+  color: #333;
+}
+
+.blog-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.blog-form input,
+.blog-form textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: var(--rounded-md);
+  font-family: inherit;
+  font-size: 14px;
+  resize: vertical;
+}
+
+.blog-form textarea {
+  min-height: 100px;
+}
+
+.blog-form .btn {
+  align-self: flex-end;
+  padding: 15px 50px;
+}
+*/  
 /* ********************************** */
 /*               FOOTER               */
 /* ********************************** */
+
 footer {
     display: flex;
     flex-direction: column;
